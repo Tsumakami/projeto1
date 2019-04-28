@@ -12,15 +12,15 @@ public class Disciplina {
     }
 
     public boolean setCodigo(String codigo) {
-        int cod = Integer.parseInt(this.codigo);
-        boolean digito = Character.isDigit(cod);
-        if (!digito) {
-    	    System.out.println("Codigo Invalido");
-    	    return false;
-         } else {
+        if (codigo == null) {
+            System.out.println("Codigo Inválido");
+            return false;
+        } else {
             this.codigo = codigo;
-    	    return true;
-         }
+            return true;
+        }
+            
+         
     }
 
     public String getNome() {
@@ -42,16 +42,14 @@ public class Disciplina {
     }
 
     public boolean setCargaHoraria(String cargaHoraria) {
-        boolean Carga;
-        int cargaH = Integer.parseInt(this.cargaHoraria);
-        Carga = Character.isDigit(cargaH);
-        if (Carga) {
-            System.out.println("Carga Horaria Invalida");
+       if (cargaHoraria == null) {
+            System.out.println("Carga Horaria Inválida");
             return false;
         } else {
             this.cargaHoraria = cargaHoraria;
             return true;
         }
+                
     }
     
     public void lerDados() {
@@ -62,7 +60,7 @@ public class Disciplina {
         } while (!setCodigo(sc.next()));
         
         do {
-            System.out.println("Nome: ");
+            System.out.print("Nome: ");
         } while (!setNome(sc.next()));
         
         do {

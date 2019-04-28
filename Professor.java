@@ -45,7 +45,7 @@ public class Professor extends Funcionarios {
     }
 
     public boolean setDisciplina(Disciplina[] disciplina) {
-         if (disciplina == null) {
+        if (disciplina == null) {
             System.out.println("Disciplina Inválida");
             return false;
         } else {
