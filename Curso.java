@@ -3,7 +3,7 @@ package projeto1;
 import java.util.Scanner;
 
 
-public class Curso {
+public abstract class Curso {
   
     String codigo;
     String nomeCurso;

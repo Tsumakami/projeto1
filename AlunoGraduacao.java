@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class AlunoGraduacao extends Aluno {
     private String instituicao;
-    private Curso curso;
+    private CursoGraduacao curso;
     
     public String getInstituicao() {
         return this.instituicao;
@@ -29,7 +29,7 @@ public class AlunoGraduacao extends Aluno {
         return curso;
     }
 
-    public boolean setCurso(Curso curso) {
+    public boolean setCurso(CursoGraduacao curso) {
         if(curso == null){
             System.out.println("Curso Invalido");
             return false;
@@ -48,10 +48,10 @@ public class AlunoGraduacao extends Aluno {
         do{
             System.out.print("Instituição: ");
         }while(!setInstituicao(entrada.nextLine()));
-        Curso c = null;
+        CursoGraduacao c = null;
         do{
             System.out.print("Curso --> ");
-            c = new Curso();
+            c = new CursoGraduacao();
             c.lerDados();
         }while(!setCurso(c));
                 

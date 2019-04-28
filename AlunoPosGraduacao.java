@@ -7,7 +7,7 @@ public class AlunoPosGraduacao extends Aluno {
     private String instituicao;
     private String ano_inicio;
     private String ano_conclusao;
-    private Curso curso;
+    private CursoPosGraduacao curso;
     
     
     public String getGraduacao() {
@@ -66,7 +66,7 @@ public class AlunoPosGraduacao extends Aluno {
         return curso;
     }
 
-    public boolean setCurso(Curso curso) {
+    public boolean setCurso(CursoPosGraduacao curso) {
         if(curso == null){
             System.out.println("Curso Invalido");
             return false;
@@ -95,10 +95,10 @@ public class AlunoPosGraduacao extends Aluno {
         do{
             System.out.print("Ano de Conclusao: ");
         }while(!setAno_conclusao(entrada.next()));
-        Curso c = null;
+        CursoPosGraduacao c = null;
         do{
             System.out.print("Curso --> ");
-            c = new Curso();
+            c = new CursoPosGraduacao();
             c.lerDados();
         }while(!setCurso(c));
                 
