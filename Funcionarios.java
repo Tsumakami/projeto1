@@ -104,8 +104,7 @@ public abstract class Funcionarios extends Pessoa{
     }
 
     public String getSalario() {
-        String salarioFinal = Double.toString(this.calcularSalario());
-        return salarioFinal;
+        return this.salario;
     }
 
     public boolean setSalario(String salario) {
@@ -144,7 +143,7 @@ public abstract class Funcionarios extends Pessoa{
         System.out.println("Endereco: " + this.getEndereco() + "\n" +
                            "CPF: " + this.getCPF() + "\n" +
                            "Numero CTPS: "+ this.getNumeroCTPS() + "\n" +
-                           "Salario: " + this.getSalario() + "\n");
+                           "Salario: R$ " + this.calcularSalario() + "\n");
     }
     
     

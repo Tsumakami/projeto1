@@ -47,11 +47,12 @@ public class TecnicoAdministrativo extends Funcionarios {
     
     @Override
     public double calcularSalario() {
-        double salario = Double.parseDouble(getSalario());
-        double valorHora = Double.parseDouble(getValorHoraExtra());
-        int qHoras = Integer.parseInt(getQuantidadeHoraExtra());
+        double salari = Double.parseDouble(this.getSalario());
+        double valorHora = Double.parseDouble(this.getValorHoraExtra());
+        int qHoras = Integer.parseInt(this.getQuantidadeHoraExtra());
         
-        return salario + (valorHora * qHoras);
+        double s = salari + (valorHora * qHoras);
+        return s;
     }
     
     @Override
@@ -71,8 +72,8 @@ public class TecnicoAdministrativo extends Funcionarios {
 
     public void mostrarDados() {
         super.mostrarDados();
-                System.out.println("Valor da Hora Extra: " + getValorHoraExtra() + "\n" 
-                + "Horas Extra: " + getQuantidadeHoraExtra() + "\n");
+        System.out.println("Valor da Hora Extra: " + getValorHoraExtra() + "\n" 
+            + "Horas Extra: " + getQuantidadeHoraExtra() + "\n");
                 
     }
     
