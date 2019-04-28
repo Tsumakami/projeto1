@@ -5,6 +5,9 @@
  */
 package projeto1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author joao
@@ -18,9 +21,10 @@ public class Projeto1 {
         
         AlunoPosGraduacao au1 = new AlunoPosGraduacao();
         Professor p1 = new Professor();
-        Curso c1 = new Curso();
+        CursoGraduacao c1 = new CursoGraduacao();
         Disciplina d1 = new Disciplina();
         Aluno a1 = new Aluno();
+        TecnicoAdministrativo t1 = new TecnicoAdministrativo();
         
         System.out.println("----------------------- CADASTROS -----------------------------");
         
@@ -28,12 +32,14 @@ public class Projeto1 {
 //        au1.lerDados();
         System.out.println("Cadastro de Professor");
         p1.lerDados();
-//        System.out.println("Cadastro de Curso");
+//        System.out.println("Cadastro de CursoGraduacao");
 //        c1.lerDados();
 //        System.out.println("Cadastro de Disciplina"); 
 //        d1.lerDados();
 //        System.out.println("cadastro de Aluno");
 //        a1.lerDados();
+        System.out.println("cadastro de Tecnico Administrativo");
+        t1.lerDados();
         
         System.out.println("----------------------- MOSTRANDO DADOS -----------------------");
                
@@ -41,7 +47,14 @@ public class Projeto1 {
 //        d1.mostrarDados();
 //        a1.mostrarDados();
 //        au1.mostrarDados();
-          p1.mostrarDados();
+        p1.mostrarDados();
+        t1.mostrarDados();
+        
+        List<Funcionarios> funcionarios = new ArrayList<>();
+        funcionarios.add(p1);
+        funcionarios.add(t1);
+        System.out.println("----------------------- FOLHA DE PAGAMENTO ---------------------");
+        FolhaPagamento.folhaPagamento(funcionarios);
     }
     
 }
